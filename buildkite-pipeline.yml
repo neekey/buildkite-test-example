@@ -1,0 +1,11 @@
+steps:
+  - name: ':hammer: Tests'
+    command: 'test.sh'
+    agents:
+      queue: 'default'
+
+  - name: ':rocket: Deploy'
+    command: 'deploy.sh'
+    branches: 'master'
+    agents:
+      queue: 'default'
